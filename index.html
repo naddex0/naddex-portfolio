@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Naddex | Creative Web Developer</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f8ff;
+      color: #003366;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header {
+      width: 100%;
+      background: linear-gradient(135deg, #003366, #007BFF);
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    header img.logo {
+      width: 300px;
+      max-width: 90%;
+      margin-bottom: 1rem;
+      filter: drop-shadow(0 0 15px #00f5ff);
+    }
+
+    section {
+      max-width: 800px;
+      width: 90%;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    h2 {
+      color: #0051a3;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    .contacts a {
+      display: inline-block;
+      margin: 0.5rem;
+      padding: 0.75rem 1.2rem;
+      background: #007BFF;
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: background 0.3s;
+    }
+
+    .contacts a:hover {
+      background: #0051a3;
+    }
+
+    footer {
+      background: #003366;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: auto;
+      width: 100%;
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeIn 1s forwards;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="naddex-logo.png" alt="Naddex Logo" class="logo">
+    <p>Creative Web Developer</p>
+  </header>
+
+  <section class="fade-in">
+    <h2>Welcome to My Portfolio</h2>
+    <p>
+      Hi, I'm Naddex — a passionate and creative web developer. I build sleek, functional websites using HTML, CSS, and JavaScript.
+    </p>
+    <p>
+      I love bringing digital ideas to life with modern design and a touch of interaction.
+    </p>
+  </section>
+
+  <section class="fade-in">
+    <h2>Contact Me</h2>
+    <div class="contacts">
+      <a href="mailto:daniel.nsima.5@gmail.com">📧 Email Me</a>
+      <a href="https://wa.me/2349167070591" target="_blank">💬 WhatsApp</a>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Naddex | All Rights Reserved
+  </footer>
+
+  <script>
+    const fadeInElements = document.querySelectorAll('.fade-in');
+    window.addEventListener('scroll', () => {
+      fadeInElements.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
+          el.style.animationPlayState = 'running';
+        }
+      });
+    });
+  </script>
+</body>
+</html>
